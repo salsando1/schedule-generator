@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import utilities.*?>
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="1209.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schedulerbysalvador.FXMLDocumentController">
+   <children>
+      <Button fx:id="btnEmployee" layoutX="1056.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnAddEmployee" prefHeight="25.0" prefWidth="122.0" text="Add Employee" />
+      <Button layoutX="1056.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnBusinessHours" prefHeight="25.0" prefWidth="122.0" text="Bussines Hours" />
+      <Label fx:id="lbReview" layoutX="576.0" layoutY="39.0" prefHeight="135.0" prefWidth="435.0" text="Set bussines hours!!!" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
+      <TextArea fx:id="taScheduleHolder" editable="false" layoutX="37.0" layoutY="218.0" prefHeight="275.0" prefWidth="1144.0" text="empty" />
+      <RadioButton fx:id="rbFriday" layoutX="38.0" layoutY="124.0" mnemonicParsing="false" onAction="#rbFridaySelected" text="Friday">
+         <toggleGroup>
+            <ToggleGroup fx:id="week" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbSaturday" layoutX="38.0" layoutY="149.0" mnemonicParsing="false" onAction="#rbSaturdaySelected" text="Saturday" toggleGroup="$week" />
+      <RadioButton fx:id="rbSunday" layoutX="39.0" layoutY="175.0" mnemonicParsing="false" onAction="#rbSundaySelected" text="sunday" toggleGroup="$week" />
+      <RadioButton fx:id="rbThursday" layoutX="38.0" layoutY="101.0" mnemonicParsing="false" onAction="#rbThursdaySelected" text="Thursday" toggleGroup="$week" />
+      <RadioButton fx:id="rbWednesday" layoutX="37.0" layoutY="78.0" mnemonicParsing="false" onAction="#rbWednesdaySelected" text="Wednesday" toggleGroup="$week" />
+      <RadioButton fx:id="rbTuesday" layoutX="39.0" layoutY="54.0" mnemonicParsing="false" onAction="#rbTuesdaySelected" text="Tuesday" toggleGroup="$week" />
+      <RadioButton fx:id="rbMonday" layoutX="39.0" layoutY="29.0" mnemonicParsing="false" onAction="#rbMondaySelected" text="Monday" toggleGroup="$week" />
+      <HoursTextField fx:id="tfHoursIn" layoutX="187.0" layoutY="56.0" prefHeight="25.0" prefWidth="30.0" />
+      <Label layoutX="223.0" layoutY="54.0" text=":">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="48.0" text="-">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="cbInTime" layoutX="278.0" layoutY="56.0" prefHeight="26.0" prefWidth="39.0" />
+      <MinTextField fx:id="tfMinutesIn" layoutX="235.0" layoutY="56.0" prefHeight="25.0" prefWidth="30.0" />
+      <MinTextField fx:id="tfMinutesOut" layoutX="397.0" layoutY="57.0" prefHeight="25.0" prefWidth="30.0" />
+      <ChoiceBox fx:id="cbOutTime" layoutX="440.0" layoutY="57.0" prefHeight="26.0" prefWidth="39.0" />
+      <Label layoutX="386.0" layoutY="55.0" text=":">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <HoursTextField fx:id="tfHoursOut" layoutX="349.0" layoutY="57.0" prefHeight="25.0" prefWidth="30.0" />
+      <CheckBox fx:id="cbOff" layoutX="503.0" layoutY="62.0" mnemonicParsing="false" text="Off" />
+      <Label fx:id="lbWarning" layoutX="577.0" layoutY="180.0" prefHeight="25.0" prefWidth="579.0" />
+      <ListView fx:id="lvEmployees" layoutX="178.0" layoutY="105.0" prefHeight="96.0" prefWidth="287.0" />
+   </children>
+</AnchorPane>

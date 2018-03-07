@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import schedulerbysalvador.*?>
+<?import utilities.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schedulerbysalvador.Dialog">
+   <children>
+      <Label fx:id="lMonday" layoutX="428.0" layoutY="85.0" prefHeight="27.0" prefWidth="130.0" text="Monday" />
+      <Label fx:id="lTuesday" layoutX="430.0" layoutY="144.0" text="Tuesday" />
+      <Label fx:id="lWednesday" layoutX="428.0" layoutY="204.0" text="Wednesday" />
+      <Label fx:id="lThursday" layoutX="431.0" layoutY="261.0" text="Thursday" />
+      <Label fx:id="lFriday" layoutX="434.0" layoutY="318.0" prefHeight="27.0" prefWidth="59.0" text="Friday" />
+      <Label fx:id="lSunday" layoutX="432.0" layoutY="420.0" prefHeight="44.0" prefWidth="158.0" text="Sunday" />
+      <Label fx:id="lSaturday" layoutX="429.0" layoutY="371.0" text="Saturday" />
+      <Button layoutX="152.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnOk" prefHeight="53.0" prefWidth="103.0" text="Ok">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Button layoutX="390.0" layoutY="487.0" mnemonicParsing="false" onAction="#btCancel" text="Cancel">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Label layoutX="105.0" layoutY="11.0" text="Select Store Bussines Hours">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hbWednesdayConfig" layoutX="21.0" layoutY="195.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromWednesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromWednesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromWednesday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToWednesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToWednesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToWednesday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbThursdayConfig" layoutX="20.0" layoutY="252.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromThursday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromThursday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromThursday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToThursday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToThursday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToThursday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbFridayConfig" layoutX="22.0" layoutY="309.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromFriday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromFriday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromFriday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToFriday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToFriday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToFriday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbTuesdayConfig" layoutX="19.0" layoutY="135.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromTuesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromTuesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromTuesday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToTuesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToTuesday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToTuesday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbSaturdayConfig" layoutX="20.0" layoutY="362.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromSaturday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromSaturday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromSaturday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToSaturday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToSaturday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToSaturday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbSundayConfig" layoutX="20.0" layoutY="420.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromSunday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromSunday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromSunday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToSunday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToSunday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToSunday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbMondayConfig" layoutX="20.0" layoutY="76.0" prefHeight="44.0" prefWidth="384.0">
+         <children>
+            <HoursTextField fx:id="tfHoursFromMonday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="11.0" text=" : " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinFromMonday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbFromMonday" prefHeight="47.0" prefWidth="75.0" />
+            <Label prefHeight="55.0" prefWidth="31.0" text=" - " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <HoursTextField fx:id="tfHoursToMonday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <Label prefHeight="44.0" prefWidth="18.0" text=" : ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <MinTextField fx:id="tfMinToMonday" prefHeight="46.0" prefWidth="47.0" promptText="" />
+            <ChoiceBox fx:id="cbToMonday" prefHeight="47.0" prefWidth="76.0" />
+         </children>
+      </HBox>
+      <CheckBox fx:id="cbClosedMonday" layoutX="558.0" layoutY="85.0" mnemonicParsing="false" onAction="#cbMondayisSelected" text="Closed" />
+      <CheckBox fx:id="cbClosedTuesday" layoutX="558.0" layoutY="144.0" mnemonicParsing="false" onAction="#cbTuesdayisSelected" text="Closed" />
+      <CheckBox fx:id="cbClosedWednesday" layoutX="558.0" layoutY="204.0" mnemonicParsing="false" onAction="#cbWednesdayisSelected" text="Closed" />
+      <CheckBox fx:id="cbClosedThursday" layoutX="558.0" layoutY="265.0" mnemonicParsing="false" onAction="#cbThursdayisSelected" text="Closed" />
+      <CheckBox fx:id="cbClosedFriday" layoutX="558.0" layoutY="326.0" mnemonicParsing="false" onAction="#cbFridayisSelected" text="Closed" />
+      <CheckBox fx:id="cbClosedSaturday" layoutX="558.0" layoutY="375.0" mnemonicParsing="false" onAction="#cbSaturdayisSelected" text="Closed" />
+      <CheckBox fx:id="cbClosedSunday" layoutX="558.0" layoutY="429.0" mnemonicParsing="false" onAction="#cbSundayisSelected" text="Closed" />
+   </children>
+</AnchorPane>
